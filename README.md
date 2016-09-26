@@ -7,5 +7,11 @@ This repo demonstrate simple react-native and redux with fetching data from API
 
 - clone this repo
 - run `npm install`
+
+#### Run Android
 - run `react-native run-android`
+- run `react-native start`
+
+#### Run iOS
+- run `react-native run-ios`
 - run `react-native start`

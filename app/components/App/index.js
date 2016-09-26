@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { Content, Spinner, Button, Container, Card, CardItem, Thumbnail } from 'native-base';
+import { Content, Spinner, Button, Container, Card, CardItem, Thumbnail, Header, Title } from 'native-base';
 import * as actions from './../../actions/appActions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -36,7 +36,7 @@ class App extends Component {
 
   _renderRow(jobads) {
     let end_date = moment(jobads.end_at).format('DD/MM/YYYY');
-    let company_logo = jobads.company.logo_path ? {uri: jobads.company.logo_path} : require('./../../images/company_icon_home.png');
+    let company_logo = jobads.company.logo_path ? {uri: jobads.company.logo_path} : {uri: 'https://www.siberdizayn.com.tr/templates/siberdizayn/images/company-icon_home.png'};
 
     return (
       <View style={styles.list_ads}>
@@ -63,6 +63,9 @@ class App extends Component {
   render() {
     return (
       <Container>
+        <Header>
+          <Title>Header</Title>
+        </Header>
         <Content>
           <View>
             <Text style={styles.title}>List Available Job Ads</Text>
